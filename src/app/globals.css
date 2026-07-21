@@ -1,0 +1,667 @@
+@import "tailwindcss";
+
+@theme {
+  /* ═══════════════════════════════════════════════════
+     GTA 6 — Vice City Sunset Palette
+     Extracted from the tropical purple/pink night sky
+     ═══════════════════════════════════════════════════ */
+
+  /* Backgrounds */
+  --color-canvas:      rgba(14, 8, 24, 0.82);  /* deep violet-black, semi-transparent */
+  --color-panel:       rgba(22, 13, 40, 0.88);  /* dark purple panel */
+  --color-panelAlt:    rgba(30, 16, 53, 0.90);  /* slightly lighter panel */
+
+  /* Primary accent — hot magenta/fuchsia (horizon glow) */
+  --color-pink:        #E91E8C;
+  /* Secondary — bright fuchsia highlight */
+  --color-coral:       #FF3D9A;
+  /* Tertiary — electric purple */
+  --color-purple:      #9B27AF;
+  /* Violet — mid-sky colour */
+  --color-violet:      #6A1B9A;
+  /* Warm sun glow at horizon */
+  --color-sunGlow:     #FF69B4;
+
+  /* Accent aliases */
+  --color-accent:      #E91E8C;
+  --color-accentAlt:   #FF3D9A;
+
+  /* Text */
+  --color-textPrimary: #F0E6FF;   /* soft lavender-white, not pure white */
+  --color-textMuted:   #7B6A9A;   /* muted violet-grey */
+
+  /* Legacy aliases */
+  --color-gtaGreen:    #E91E8C;
+  --color-gtaYellow:   #FF3D9A;
+
+  --font-sans:       var(--font-inter), "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading:    var(--font-montserrat), var(--font-oswald), "Impact", sans-serif;
+  --font-montserrat: var(--font-montserrat), sans-serif;
+  --font-oswald:     var(--font-oswald), sans-serif;
+}
+
+/* ═══════════════════════════════════════════════════
+   BASE
+   ═══════════════════════════════════════════════════ */
+:root {
+  background-color: #0E0818;
+  color: #F0E6FF;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23FEBAFF" stroke="%23000" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>') 0 0, auto !important;
+}
+
+*, *::before, *::after {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23FEBAFF" stroke="%23000" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>') 0 0, auto !important;
+}
+
+/* Pointer state — slightly larger for clickable elements */
+button, a, [role="button"], input, textarea, select {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="%23FEBAFF" stroke="%23000" stroke-width="1.5" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>') 0 0, pointer !important;
+}
+
+body {
+  background-color: transparent;
+  color: var(--color-textPrimary);
+  font-family: var(--font-sans);
+}
+
+/* ═══════════════════════════════════════════════════
+   BACKGROUND — Vice City tropical night gradient
+   ═══════════════════════════════════════════════════ */
+.gta-bg-pattern {
+  background-color: #0E0818;
+  background-image:
+    /* Violet-to-magenta overlay for atmosphere */
+    radial-gradient(
+      ellipse 120% 60% at 50% 100%,
+      rgba(14, 8, 24, 0.55) 0%,
+      rgba(14, 8, 24, 0.35) 45%,
+      transparent 70%
+    ),
+    /* Subtle diagonal camo lines */
+    repeating-linear-gradient(
+      45deg,
+      rgba(233, 30, 140, 0.018) 0px,
+      rgba(233, 30, 140, 0.018) 1px,
+      transparent 1px,
+      transparent 16px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(155, 39, 175, 0.012) 0px,
+      rgba(155, 39, 175, 0.012) 1px,
+      transparent 1px,
+      transparent 16px
+    ),
+    url('/backgroung.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* ═══════════════════════════════════════════════════
+   TYPOGRAPHY
+   ═══════════════════════════════════════════════════ */
+.gta-heading {
+  font-family: var(--font-montserrat), "Impact", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+.gta-label {
+  font-family: var(--font-oswald), var(--font-montserrat), sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Apply gradient glow to any heading via background-clip trick */
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    #F0E6FF 0%,
+    #FF69B4 40%,
+    #E91E8C 70%,
+    #9B27AF 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 12px rgba(233, 30, 140, 0.4));
+}
+
+/* ═══════════════════════════════════════════════════
+   NAV HOVER — magenta slide fill
+   ═══════════════════════════════════════════════════ */
+.gta-nav-item {
+  position: relative;
+  overflow: hidden;
+  contain: layout paint;
+  transition: color 0.15s ease;
+}
+
+.gta-nav-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Horizontal magenta-to-violet gradient fill */
+  background: linear-gradient(90deg, #E91E8C, #9B27AF);
+  transform: translateX(-100%);
+  transition: transform 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 0;
+}
+
+.gta-nav-item:hover::before,
+.gta-nav-item.active::before {
+  transform: translateX(0);
+}
+
+.gta-nav-item:hover,
+.gta-nav-item.active {
+  color: #ffffff;
+}
+
+.gta-nav-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════════════════
+   STAT BAR
+   ═══════════════════════════════════════════════════ */
+.gta-stat-bar-track {
+  background: rgba(30, 16, 53, 0.9);
+  height: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gta-stat-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #E91E8C, #FF3D9A, #FF69B4);
+  transition: width 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  box-shadow: 0 0 10px rgba(233, 30, 140, 0.5);
+}
+
+.gta-stat-bar-fill::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* ═══════════════════════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════════════════════ */
+.gta-btn-primary {
+  background: linear-gradient(135deg, #E91E8C, #9B27AF);
+  color: #ffffff;
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: all 0.15s ease;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.gta-btn-primary:hover {
+  background: linear-gradient(135deg, #FF3D9A, #E91E8C);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 24px rgba(233, 30, 140, 0.5), 0 0 40px rgba(155, 39, 175, 0.2);
+}
+
+.gta-btn-primary:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.gta-btn-outline {
+  background: transparent;
+  color: #F0E6FF;
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1.5px solid rgba(233, 30, 140, 0.45);
+  transition: all 0.15s ease;
+  cursor: pointer;
+  clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
+}
+
+.gta-btn-outline:hover {
+  border-color: #E91E8C;
+  color: #FF69B4;
+  box-shadow: 0 0 16px rgba(233, 30, 140, 0.3), inset 0 0 16px rgba(233, 30, 140, 0.05);
+}
+
+/* ═══════════════════════════════════════════════════
+   CARDS
+   ═══════════════════════════════════════════════════ */
+.gta-card {
+  background: rgba(22, 13, 40, 0.75);
+  border: 1px solid #2A1545;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.gta-card-hover:hover {
+  border-color: #E91E8C;
+  transform: scale(1.02);
+  box-shadow:
+    0 0 0 1px rgba(233, 30, 140, 0.3),
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(155, 39, 175, 0.1);
+}
+
+.gta-card-slash::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 28px 28px 0;
+  border-color: transparent #E91E8C transparent transparent;
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════════════════
+   INPUTS
+   ═══════════════════════════════════════════════════ */
+.gta-input {
+  background: rgba(10, 5, 21, 0.85);
+  border: 1px solid #2A1545;
+  color: #F0E6FF;
+  font-family: var(--font-sans);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  width: 100%;
+  padding: 12px 16px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.gta-input::placeholder {
+  color: #3D2460;
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 11px;
+}
+
+.gta-input:focus {
+  border-color: #E91E8C;
+  box-shadow:
+    0 0 0 1px rgba(233, 30, 140, 0.35),
+    inset 0 0 16px rgba(233, 30, 140, 0.05),
+    0 0 20px rgba(155, 39, 175, 0.1);
+}
+
+/* ═══════════════════════════════════════════════════
+   MISSION PASSED OVERLAY
+   ═══════════════════════════════════════════════════ */
+@keyframes mission-passed-in {
+  0%   { opacity: 0; transform: scale(1.15); }
+  30%  { opacity: 1; transform: scale(1.0); }
+  75%  { opacity: 1; transform: scale(1.0); }
+  100% { opacity: 0; transform: scale(0.95); }
+}
+
+.mission-passed-text {
+  animation: mission-passed-in 3.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  font-family: var(--font-montserrat), "Impact", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #FF69B4, #E91E8C, #9B27AF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 30px rgba(233, 30, 140, 0.8));
+}
+
+@keyframes respect-in {
+  0%   { opacity: 0; transform: translateY(12px); }
+  40%  { opacity: 1; transform: translateY(0); }
+  75%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.respect-text {
+  animation: respect-in 3.5s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* ═══════════════════════════════════════════════════
+   STAR RATING — wanted level style
+   ═══════════════════════════════════════════════════ */
+@keyframes star-pulse {
+  0%, 100% { opacity: 1;   transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(0.92); }
+}
+
+.star-active {
+  color: #FF3D9A;
+  animation: star-pulse 1.4s ease-in-out infinite;
+  display: inline-block;
+  filter: drop-shadow(0 0 8px rgba(233, 30, 140, 0.8)) drop-shadow(0 0 2px rgba(255, 105, 180, 0.9));
+}
+
+.star-inactive {
+  color: #1E1035;
+  display: inline-block;
+}
+
+/* ═══════════════════════════════════════════════════
+   WANTED LEVEL STARS (sidebar)
+   ═══════════════════════════════════════════════════ */
+@keyframes wanted-flash {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+
+.wanted-star-active {
+  animation: wanted-flash 0.8s ease-in-out infinite;
+  color: #E91E8C;
+  filter: drop-shadow(0 0 4px rgba(233, 30, 140, 0.7));
+}
+
+/* ═══════════════════════════════════════════════════
+   SCROLLBAR
+   ═══════════════════════════════════════════════════ */
+::-webkit-scrollbar       { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #0E0818; }
+::-webkit-scrollbar-thumb { background: #3D1F6B; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #E91E8C; }
+
+/* ═══════════════════════════════════════════════════
+   DIAGONAL STRIPE TEXTURE
+   ═══════════════════════════════════════════════════ */
+.gta-stripe-bg {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 6px,
+    rgba(233, 30, 140, 0.025) 6px,
+    rgba(233, 30, 140, 0.025) 12px
+  );
+}
+
+/* ═══════════════════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════════════════ */
+@keyframes slide-up-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up { animation: slide-up-in 0.22s ease-out forwards; }
+
+@keyframes scan-in {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+.animate-scan-in { animation: scan-in 2s ease-out forwards; }
+
+/* ═══════════════════════════════════════════════════
+   HEIST PAYOUT SUMMARY SCREEN
+   ═══════════════════════════════════════════════════ */
+@keyframes heist-scan-sweep {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  10%  { opacity: 0.35; }
+  90%  { opacity: 0.35; }
+  100% { transform: translateY(400%); opacity: 0; }
+}
+
+@keyframes heist-live-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px #E91E8C; }
+  50%       { opacity: 0.45; box-shadow: 0 0 2px #E91E8C; }
+}
+
+.heist-payout-panel {
+  position: relative;
+  overflow: hidden;
+  border-top: 2px solid #E91E8C;
+  border-bottom: 2px solid #9B27AF;
+  padding: 0;
+}
+
+.heist-payout-scanline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(233, 30, 140, 0.06) 48%,
+    rgba(255, 105, 180, 0.12) 50%,
+    rgba(233, 30, 140, 0.06) 52%,
+    transparent 100%
+  );
+  height: 28%;
+  animation: heist-scan-sweep 4.5s linear infinite;
+}
+
+.heist-payout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid #2A1545;
+  background: rgba(14, 8, 24, 0.55);
+  font-family: var(--font-oswald);
+  position: relative;
+  z-index: 1;
+}
+
+.heist-payout-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #E91E8C;
+  animation: heist-live-pulse 1.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.heist-payout-live-label {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  color: #E91E8C;
+  font-weight: 700;
+}
+
+.heist-payout-ticker {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: #7B6A9A;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.heist-payout-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1rem 1.25rem 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.heist-payout-title {
+  font-family: var(--font-montserrat), "Impact", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: linear-gradient(135deg, #F0E6FF 0%, #FF69B4 45%, #E91E8C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(233, 30, 140, 0.35));
+}
+
+.heist-payout-status {
+  font-family: var(--font-oswald);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #FF3D9A;
+  white-space: nowrap;
+}
+
+.heist-payout-table-head,
+.heist-payout-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr) minmax(0, 1.2fr);
+  gap: 0.75rem 1rem;
+  align-items: center;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.heist-payout-table-head {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-family: var(--font-oswald);
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  color: #3D2460;
+  border-bottom: 1px solid #2A1545;
+  position: relative;
+  z-index: 1;
+}
+
+.heist-payout-rows {
+  position: relative;
+  z-index: 1;
+}
+
+.heist-payout-row {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(42, 21, 69, 0.85);
+  transition: background 0.2s ease;
+}
+
+.heist-payout-row:hover {
+  background: rgba(233, 30, 140, 0.04);
+}
+
+.heist-payout-row:last-child {
+  border-bottom: none;
+}
+
+.heist-payout-field {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: #7B6A9A;
+}
+
+.heist-payout-label {
+  font-family: var(--font-oswald);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: #F0E6FF;
+  text-transform: uppercase;
+}
+
+.heist-payout-value-wrap {
+  text-align: right;
+}
+
+.heist-payout-value {
+  font-family: var(--font-montserrat), "Impact", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  letter-spacing: 0.04em;
+  color: #FF69B4;
+  text-shadow: 0 0 14px rgba(233, 30, 140, 0.45);
+}
+
+.heist-payout-link {
+  display: inline-block;
+  font-family: var(--font-oswald);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #E91E8C;
+  text-decoration: none;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(233, 30, 140, 0.45);
+  background: rgba(233, 30, 140, 0.08);
+  clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
+  transition: all 0.18s ease;
+}
+
+.heist-payout-link:hover {
+  color: #ffffff;
+  border-color: #E91E8C;
+  background: linear-gradient(135deg, rgba(233, 30, 140, 0.35), rgba(155, 39, 175, 0.25));
+  box-shadow: 0 0 18px rgba(233, 30, 140, 0.35);
+  transform: translateY(-1px);
+}
+
+.heist-payout-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1.25rem;
+  border-top: 2px solid #2A1545;
+  background: rgba(14, 8, 24, 0.65);
+  font-family: var(--font-oswald);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  position: relative;
+  z-index: 1;
+}
+
+.heist-payout-total {
+  font-weight: 800;
+  font-size: 12px;
+  color: #E91E8C;
+  text-shadow: 0 0 10px rgba(233, 30, 140, 0.5);
+}
+
+@media (max-width: 768px) {
+  .heist-payout-table-head {
+    display: none;
+  }
+
+  .heist-payout-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .heist-payout-value-wrap {
+    text-align: left;
+  }
+
+  .heist-payout-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
