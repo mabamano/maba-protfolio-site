@@ -37,7 +37,9 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
       setProgress((p) => {
         if (p >= 100) {
           clearInterval(interval);
-          setStage("ready");
+          setTimeout(() => {
+            handleEnter();
+          }, 350);
           return 100;
         }
 
@@ -123,9 +125,9 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
           />
         </AnimatePresence>
 
-        {/* Center overlay button for splash / ready state */}
+        {/* Center overlay button for splash stage */}
         <AnimatePresence>
-          {(stage === "click-to-start" || stage === "ready") && (
+          {stage === "click-to-start" && (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -133,7 +135,7 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
               className="absolute inset-0 flex items-center justify-center bg-black/35 backdrop-blur-[2px] z-20"
             >
               <motion.button
-                onClick={stage === "click-to-start" ? handleStartLoading : handleEnter}
+                onClick={handleStartLoading}
                 onMouseEnter={playHover}
                 animate={{ 
                   boxShadow: ["0 0 15px rgba(233,30,140,0.5)", "0 0 35px rgba(233,30,140,0.8)", "0 0 15px rgba(233,30,140,0.5)"] 
@@ -144,11 +146,12 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
                   textShadow: "2px 2px 0px rgba(0,0,0,0.7)",
                 }}
               >
-                {stage === "click-to-start" ? "START GAME" : "PLAY GAME"}
+                START GAME
               </motion.button>
             </motion.div>
           )}
         </AnimatePresence>
+
       </div>
 
       {/* Entering Portfolio Flash Overlay */}

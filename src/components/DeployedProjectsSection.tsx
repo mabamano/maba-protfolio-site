@@ -7,30 +7,31 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    id: "01", missionName: "HEIST_ALPHA", title: "NEXUS_DB",
-    description: "Distributed data platform with real-time GraphQL subscriptions, row-level security, and edge caching. Built to handle 10k+ concurrent sessions without breaking a sweat.",
-    tags: ["NEXT.JS", "GRAPHQL", "POSTGRESQL"], payout: "100% SUCCESS", teamRole: "LEADER",
-    liveUrl: "#", repoUrl: "#",
+    id: "01", missionName: "CYBER_SHIELD", title: "CYBERSHIELD",
+    description: "AI-powered cybersecurity platform featuring real-time phishing detection, AI chatbot assistance, and threat intelligence dashboards.",
+    tags: ["REACT", "PYTHON", "MACHINE LEARNING"], payout: "SECURE SUCCESS", teamRole: "LEAD ARCHITECT",
+    liveUrl: "https://github.com/mabamano/CyberShield", repoUrl: "https://github.com/mabamano/CyberShield",
   },
   {
-    id: "02", missionName: "HEIST_BRAVO", title: "AETHER_FLOW",
-    description: "High-throughput real-time event pipeline using WebSockets and Redis pub/sub. Sub-20ms latency across global edge nodes.",
-    tags: ["NODE.JS", "WEBSOCKETS", "REDIS"], payout: "100% SUCCESS", teamRole: "ARCHITECT",
-    liveUrl: "#", repoUrl: "#",
+    id: "02", missionName: "SMART_INDIA_2025", title: "SMART WASTE 360",
+    description: "Smart India Hackathon Grand Finalist project. IoT-enabled waste monitoring with household, collector, and municipal dashboards, real-time GPS tracking, and Firebase sync.",
+    tags: ["REACT", "FIREBASE", "ESP32", "IoT"], payout: "SIH FINALIST", teamRole: "PROJECT LEAD",
+    liveUrl: "https://github.com/mabamano/Smart-Waste-360", repoUrl: "https://github.com/mabamano/Smart-Waste-360",
   },
   {
-    id: "03", missionName: "HEIST_CHARLIE", title: "KRONOS_CRON",
-    description: "Enterprise-grade job scheduling system. Containerized, horizontally scalable, with full observability and zero missed executions.",
-    tags: ["REACT", "TAILWIND", "DOCKER"], payout: "100% SUCCESS", teamRole: "LEADER",
-    liveUrl: "#", repoUrl: "#",
+    id: "03", missionName: "TACTICAL_RADAR", title: "MILITARY RADAR",
+    description: "Tactical radar system integrating ultrasonic sensors, ESP32 microcontrollers, and web visualization to display active coordinates in real-time.",
+    tags: ["ARDUINO", "C++", "WEB SOCKETS"], payout: "ROBOTICS WIN", teamRole: "ROBOTICS LEAD",
+    liveUrl: "https://github.com/mabamano", repoUrl: "https://github.com/mabamano",
   },
   {
-    id: "04", missionName: "HEIST_DELTA", title: "HELIOS_SYS",
-    description: "Multi-region cloud infrastructure managed via Terraform. Auto-scaling, zero-downtime deploys, 99.99% SLA across 3 availability zones.",
-    tags: ["AWS", "TERRAFORM", "TYPESCRIPT"], payout: "100% SUCCESS", teamRole: "ARCHITECT",
-    liveUrl: "#", repoUrl: "#",
+    id: "04", missionName: "MISSION_VISION", title: "VEHICLE DETECTION YOLO",
+    description: "Deep learning computer vision system trained on military hardware. Automatically detects and classifies vehicles using webcam streams via TensorFlow.",
+    tags: ["TENSORFLOW", "OPENCV", "PYTHON"], payout: "100% ACCURACY", teamRole: "AI ENGINEER",
+    liveUrl: "https://github.com/mabamano", repoUrl: "https://github.com/mabamano",
   },
 ];
+
 
 export default function DeployedProjectsSection() {
   const { playHover, playConfirm } = useSound();

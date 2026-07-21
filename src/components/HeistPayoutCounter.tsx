@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView, useSpring, useTransform } from "framer-motion";
 
 interface PayoutRow {
-  field:      string;
   label:      string;
   display:    string;
   animateTo?: number;
@@ -17,33 +16,34 @@ interface PayoutRow {
 
 const payoutRows: PayoutRow[] = [
   {
-    field:   "Experience",
-    label:   "PLAYTIME IN INDUSTRY",
-    display: "5+ YEARS",
+    label:      "HACKATHONS COMPLETED",
+    display:    "10+ RUNS",
+    animateTo:  10,
+    suffix:     "+ RUNS",
   },
   {
-    field:      "Code Commits",
-    label:      "TOTAL HEISTS COMPLETED",
-    display:    "1,240+ COMMITS",
-    animateTo:  1240,
-    suffix:     "+ COMMITS",
+    label:      "COMPETITION TROPHIES",
+    display:    "12+ WINS",
+    animateTo:  12,
+    suffix:     "+ WINS",
   },
   {
-    field:      "Code Coverage",
-    label:      "MISSION SUCCESS RATE",
-    display:    "99.4%",
-    animateTo:  99.4,
-    decimals:   1,
-    suffix:     "%",
+    label:      "TOTAL BOUNTY EARNED",
+    display:    "₹34,000+",
+    animateTo:  34000,
+    prefix:     "₹",
+    suffix:     "+",
   },
   {
-    field:   "Resume PDF",
     label:   "DOWNLOAD MISSION BRIEF",
     display: "[ GET_RESUME.PDF ]",
     isLink:  true,
-    href:    "/resume.pdf",
+    href:    "/manoj_s_Resume.pdf",
   },
+
 ];
+
+
 
 function AnimatedValue({
   target,
@@ -106,7 +106,6 @@ function PayoutRowItem({
       animate={active ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.4, delay: index * 0.12 }}
     >
-      <div className="heist-payout-field">{row.field}</div>
       <div className="heist-payout-label">{row.label}</div>
       <div className="heist-payout-value-wrap">
         {row.isLink ? (
@@ -177,21 +176,22 @@ export default function HeistPayoutCounter() {
       </div>
 
       <div className="heist-payout-table-head" aria-hidden="true">
-        <span>METRIC FIELD</span>
-        <span>GTA STYLE LABEL</span>
-        <span>VALUE</span>
+        <span>CONTRACT MISSION OBJECTIVE</span>
+        <span className="text-right">RESULT / STATUS</span>
       </div>
 
       <div className="heist-payout-rows">
         {payoutRows.map((row, i) => (
-          <PayoutRowItem key={row.field} row={row} index={i} active={inView} />
+          <PayoutRowItem key={row.label} row={row} index={i} active={inView} />
         ))}
       </div>
 
+
       <div className="heist-payout-footer">
-        <span className="text-textMuted">TOTAL CREW CUT</span>
-        <span className="heist-payout-total">$∞ REPUTATION</span>
+        <span className="text-textMuted">TOTAL CASH PRIZES</span>
+        <span className="heist-payout-total">₹34,000+ CASH</span>
       </div>
+
     </div>
   );
 }

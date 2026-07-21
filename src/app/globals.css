@@ -28,7 +28,7 @@
 
   /* Text */
   --color-textPrimary: #F0E6FF;   /* soft lavender-white, not pure white */
-  --color-textMuted:   #7B6A9A;   /* muted violet-grey */
+  --color-textMuted:   #F0E6FF;   /* bright soft white/lavender */
 
   /* Legacy aliases */
   --color-gtaGreen:    #E91E8C;
@@ -298,7 +298,7 @@ body {
 }
 
 .gta-input::placeholder {
-  color: #3D2460;
+  color: #9B8EB8;
   font-family: var(--font-montserrat), sans-serif;
   font-weight: 600;
   text-transform: uppercase;
@@ -491,7 +491,7 @@ body {
 .heist-payout-ticker {
   font-size: 9px;
   letter-spacing: 0.18em;
-  color: #7B6A9A;
+  color: var(--color-textMuted);
   text-align: right;
   white-space: nowrap;
 }
@@ -532,12 +532,13 @@ body {
 .heist-payout-table-head,
 .heist-payout-row {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   gap: 0.75rem 1rem;
   align-items: center;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
+
 
 .heist-payout-table-head {
   padding-top: 0.5rem;
@@ -545,7 +546,7 @@ body {
   font-family: var(--font-oswald);
   font-size: 8px;
   letter-spacing: 0.2em;
-  color: #3D2460;
+  color: #9B8EB8;
   border-bottom: 1px solid #2A1545;
   position: relative;
   z-index: 1;
@@ -574,7 +575,7 @@ body {
 .heist-payout-field {
   font-family: var(--font-sans);
   font-size: 11px;
-  color: #7B6A9A;
+  color: var(--color-textMuted);
 }
 
 .heist-payout-label {

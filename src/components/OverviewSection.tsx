@@ -13,12 +13,13 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { attribute: "SPECIAL (ARCHITECTURE)", subtitle: "System Design & Infrastructure", stars: 5, status: "MAXED"  },
-  { attribute: "STAMINA (BACKEND DEV)",  subtitle: "APIs, Databases, Serverless",    stars: 4, status: "EXPERT" },
-  { attribute: "DRIVE (FRONTEND UI)",    subtitle: "React, Next.js, Animation",       stars: 5, status: "MAXED"  },
-  { attribute: "STEALTH (DEVOPS/CLOUD)", subtitle: "AWS, Docker, Terraform",          stars: 4, status: "EXPERT" },
-  { attribute: "SHOOTING (PERFORMANCE)",subtitle: "Optimization, Profiling, Caching",stars: 4, status: "EXPERT" },
+  { attribute: "ARTIFICIAL INTELLIGENCE",   subtitle: "TensorFlow, OpenCV, YOLO, Computer Vision", stars: 5, status: "MAXED"  },
+  { attribute: "ROBOTICS & EMBEDDED",       subtitle: "Arduino, ESP32, ROS 2, Sensor Integration",  stars: 5, status: "MAXED"  },
+  { attribute: "FULL-STACK DEVELOPMENT",    subtitle: "React.js, Node.js, Express, Firebase",      stars: 5, status: "MAXED"  },
+  { attribute: "CYBERSECURITY & INFOSEC",   subtitle: "Burp Suite, OWASP, Penetration Testing",     stars: 4, status: "EXPERT" },
+  { attribute: "SYSTEM CONTROLS & DEV",     subtitle: "C++, Java, Python, Linux, Databases",        stars: 4, status: "EXPERT" },
 ];
+
 
 function StarRating({ stars, index }: { stars: number; index: number }) {
   return (
@@ -67,16 +68,14 @@ export default function OverviewSection() {
             </div>
             <p className="text-sm leading-relaxed font-sans" style={{ color: "#F0E6FF" }}>
               Name&rsquo;s{" "}
-              <strong style={{ color: "#FF69B4" }} className="font-semibold">Alex Vance</strong>.
-              {" "}Senior Full-Stack Engineer, Project Lead. A decade running
-              high-stakes builds — distributed APIs, serverless pipelines, and
-              front-ends that don&rsquo;t choke under pressure.
+              <strong style={{ color: "#FF69B4" }} className="font-semibold">Manojkumar M</strong>.
+              {" "}AI, Robotics, &amp; Full-Stack Architect. Currently pursuing Computer Science and Business Systems at Ramco Institute of Technology. I bridge the gap between software and hardware to build intelligent, autonomous, and secure systems.
             </p>
             <p className="text-textMuted text-sm leading-relaxed font-sans">
-              Design principles: speed, clean architecture, zero performance
-              debt. Every system ships tight — no excuses, no shortcuts.
+              My mission: engineering state-of-the-art robots, robust machine learning pipelines, and highly scalable web applications. No lag, no compromise.
             </p>
           </div>
+
 
           {/* Capability Matrix */}
           <div className="gta-card p-5 space-y-5">

@@ -1,0 +1,444 @@
+This is already a strong resume. Based on everything I know about you over the past year, here's what I would improve and what additional content you can use on your portfolio.
+
+---
+
+# Hero
+
+## MANOJKUMAR M
+
+**AI • Robotics • Embedded Systems • Full-Stack Developer • Cybersecurity**
+
+> Building intelligent systems that bridge software and hardware—from AI-powered security platforms to autonomous robots.
+
+📍 Rajapalayam, Tamil Nadu, India
+
+📧 [kalaimaba@gmail.com](mailto:kalaimaba@gmail.com)
+
+📱 +91 8778546723
+
+🔗 LinkedIn: manojkumar-m
+
+💻 GitHub: mabamano
+
+---
+
+# About Me
+
+I'm a Computer Science and Business Systems undergraduate at Ramco Institute of Technology with a passion for building intelligent systems that solve real-world problems.
+
+My interests span Artificial Intelligence, Robotics, Embedded Systems, Cybersecurity, and Full-Stack Development. I enjoy combining software and hardware to create impactful solutions—from autonomous robots and computer vision models to scalable web platforms.
+
+Over the last few years, I've actively participated in national hackathons, robotics competitions, AI research projects, and freelance development, constantly learning through hands-on experience.
+
+---
+
+# Experience
+
+## AI R&D Intern
+
+**Meritus AI**
+
+**Duration:** 1 Month
+
+* Developed a Zoo Animal Detection AI model for a client project.
+* Prepared datasets and annotations.
+* Assisted in TensorFlow model development.
+* Documented model architecture and workflow.
+
+---
+
+## AI Project Contributor
+
+**Ramco Mills Limited**
+
+* Worked on an AI-powered PPE Detection system.
+* Performed image annotation and dataset preparation.
+* Assisted in model training and validation.
+
+---
+
+## Freelance Web Developer
+
+* Built responsive websites for clients.
+* Managed projects from requirement gathering to deployment.
+* Delivered optimized and user-friendly web applications.
+
+---
+
+# Technical Skills
+
+## Languages
+
+* Java
+* Python
+* JavaScript
+* TypeScript
+* C++
+* PHP
+
+---
+
+## Web
+
+* React.js
+* Node.js
+* Express.js
+* Firebase
+* Tailwind CSS
+* HTML5
+* CSS3
+
+---
+
+## AI / Machine Learning
+
+* TensorFlow
+* OpenCV
+* YOLO
+* Object Detection
+* Image Classification
+* Dataset Annotation
+
+---
+
+## Robotics & Embedded Systems
+
+* Arduino
+* ESP32
+* Raspberry Pi
+* ROS 2
+* Sensor Integration
+* Computer Vision
+* Autonomous Robotics
+
+---
+
+## Cybersecurity
+
+* Risk Management
+* AI in Security
+* Burp Suite
+* OWASP Fundamentals
+* JWT Security
+* Web Security
+
+---
+
+## Databases
+
+* MySQL
+* Firebase Firestore
+* Firebase Realtime Database
+
+---
+
+## Tools
+
+* Git
+* GitHub
+* Linux
+* Docker
+* VS Code
+
+---
+
+# Projects
+
+---
+
+## CyberShield
+
+### AI-Powered Cybersecurity Platform
+
+A full-stack AI security suite featuring phishing detection, AI chatbot assistance, and threat intelligence.
+
+**Tech Stack**
+
+* React (TypeScript)
+* Python
+* Machine Learning
+
+---
+
+## Smart Waste 360
+
+### Smart India Hackathon 2025
+
+An AI and IoT-based waste management platform.
+
+### Features
+
+* Household Dashboard
+* Collector Dashboard
+* Municipal Dashboard
+* GPS Tracking
+* Smart Bin Monitoring
+* Firebase Authentication
+* Analytics
+
+**Tech**
+
+React
+
+Firebase
+
+ESP32
+
+IoT
+
+---
+
+## Military Radar System
+
+Real-time radar visualization system integrating ultrasonic sensors with a web interface.
+
+---
+
+## Military Object Detection
+
+TensorFlow-powered object detection system capable of identifying military vehicles using webcam input.
+
+---
+
+## Harry Potter Symposium Website
+
+Interactive symposium website built using React and TypeScript.
+
+---
+
+## NGO Web Platform
+
+PHP-based website developed and deployed for NGO operations.
+
+---
+
+## WRO Robotics Projects
+
+Built autonomous robots and companion web applications.
+
+Worked on
+
+* Embedded Programming
+* C++
+* Sensor Integration
+* Navigation
+* Robotics Algorithms
+
+---
+
+## Smart Mixie
+
+🏆 First Prize Winner
+
+IoT-enabled intelligent mixer developed for LEAP Open House.
+
+---
+
+## Virtual Herbal Garden
+
+Interactive educational platform showcasing medicinal plants.
+
+---
+
+# Achievements
+
+## National Level
+
+🏆 Smart India Hackathon 2024 Grand Finalist
+
+Transport & Logistics
+
+---
+
+🏆 Smart India Hackathon 2025 Grand Finalist
+
+Smart Waste Management
+
+---
+
+🏆 World Robot Olympiad National Finalist
+
+Team ROBOVANGUARD
+
+12th Position
+
+Bronze Badge
+
+---
+
+🏆 IndiaSkills 2025
+
+Qualified for District Round
+
+Autonomous Mobile Robotics
+
+---
+
+# Hackathons
+
+* Participated in **10+ Hackathons**
+
+---
+
+## EUPHORIA 2K25
+
+Top 8
+
+Recognized by IBM
+
+Received
+
+* IBM Merchandise
+* Interview Opportunity
+
+---
+
+# Competition Wins
+
+🥇 LEAP Open House
+
+First Prize
+
+September 2024
+
+---
+
+🥇 Robothon 2024
+
+Top Five
+
+₹5,000
+
+---
+
+🥇 Robothon 2025
+
+Top Five
+
+₹5,000
+
+---
+
+🥇 TCE Line Follower
+
+Winner
+
+₹2,000
+
+---
+
+🥇 EUPHORIA 2K26 Hackathon
+
+Winner
+
+₹5,000
+
+---
+
+🥇 EUPHORIA 2K25 Line Follower
+
+Winner
+
+₹5,000
+
+---
+
+🥇 EUPHORIA 2K24 Game Development
+
+Winner
+
+₹7,000
+
+---
+
+🥇 EUPHORIA 2K24 Pitch Parade
+
+Winner
+
+₹5,000
+
+---
+
+# Total Prize Money
+
+Based on the achievements you've shared:
+
+* Robothon 2024 — ₹5,000
+* Robothon 2025 — ₹5,000
+* TCE Line Follower — ₹2,000
+* EUPHORIA 2K26 Hackathon — ₹5,000
+* EUPHORIA 2K25 Line Follower — ₹5,000
+* EUPHORIA 2K24 GameDev — ₹7,000
+* EUPHORIA 2K24 Pitch Parade — ₹5,000
+
+## **Total Cash Prize: ₹34,000+**
+
+(Excludes LEAP Open House and IBM merchandise since no cash amount was specified.)
+
+---
+
+# Leadership
+
+### Cybersecurity Awareness Event
+
+Organized and served as Resource Person.
+
+* 100+ Participants
+* Hands-on demonstrations
+* Cybersecurity awareness sessions
+
+---
+
+### Value Added Course
+
+Conducted a one-week IoT training program.
+
+Covered
+
+* Arduino
+* ESP32
+* Sensors
+* Practical IoT Development
+
+---
+
+# GitHub
+
+Username
+
+**mabamano**
+
+Highlighted repositories
+
+* CyberShield
+* Smart Waste 360
+* WRO WebApp
+* HP Symposium
+* NGO Web
+* IoT Lab
+* TN Skills
+* SIH 2025
+
+---
+
+# Technologies
+
+Java • Python • TypeScript • React • Node.js • Firebase • TensorFlow • OpenCV • ROS2 • Arduino • ESP32 • Raspberry Pi • MySQL • Git • Linux • Docker • PHP • Tailwind CSS
+
+---
+
+# Some interesting stats for your portfolio
+
+Instead of just listing things, add counters like these:
+
+* 🏆 **10+ Hackathons**
+* 🥇 **12+ Competition Awards**
+* 💰 **₹34,000+ Prize Money**
+* 🤖 **15+ Technical Projects**
+* 🏅 **2× Smart India Hackathon Grand Finalist**
+* 🌐 **5+ Full-Stack Applications**
+* 🤖 **10+ Robotics Prototypes**
+* 👨‍🏫 **100+ Students Mentored**
+* 💼 **3+ Professional/Freelance Experiences**
+
+These metrics make your portfolio immediately impressive to recruiters and visitors.

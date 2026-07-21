@@ -126,10 +126,10 @@ export default function Home() {
       <header className="lg:hidden w-full bg-panel border-b border-[#2A1545] flex flex-col shrink-0 z-40">
         <div className="px-4 py-2 flex justify-between items-center"
           style={{ background: "linear-gradient(90deg, #E91E8C, #9B27AF)" }}>
-          <span className="gta-heading text-white text-base">ALEX VANCE</span>
+          <span className="gta-heading text-white text-base">MANOJKUMAR M</span>
           <span className="text-white/80 text-[9px] font-bold tracking-widest"
             style={{ fontFamily: "var(--font-oswald)" }}>
-            ELITE ENGINEER
+            AI & ROBOTICS DEV
           </span>
         </div>
         <nav className="flex overflow-x-auto scrollbar-none">
@@ -162,15 +162,15 @@ export default function Home() {
           <div className="px-6 py-5 shrink-0"
             style={{ background: "linear-gradient(135deg, #E91E8C 0%, #9B27AF 100%)" }}>
             <div className="gta-heading text-white text-2xl leading-tight">
-              ALEX VANCE
+              MANOJKUMAR M
             </div>
-            <div className="text-[10px] font-bold tracking-[0.2em] mt-1"
-              style={{ fontFamily: "var(--font-oswald)", color: "rgba(255,255,255,0.75)" }}>
-              ELITE FULL-STACK ENGINEER
+            <div className="text-[9px] font-bold tracking-[0.1em] mt-1"
+              style={{ fontFamily: "var(--font-oswald)", color: "rgba(255,255,255,0.85)" }}>
+              AI • ROBOTICS • CYBER • WEB
             </div>
-            <div className="text-[10px] tracking-widest mt-0.5"
-              style={{ fontFamily: "var(--font-oswald)", color: "rgba(255,255,255,0.5)" }}>
-              PROJECT LEAD
+            <div className="text-[10px] tracking-widest mt-0.5 font-bold"
+              style={{ fontFamily: "var(--font-oswald)", color: "rgba(255,255,255,0.6)" }}>
+              SYSTEMS ARCHITECT
             </div>
           </div>
 
@@ -196,7 +196,7 @@ export default function Home() {
                       className="text-xs font-bold w-6 transition-colors duration-150"
                       style={{
                         fontFamily: "var(--font-oswald)",
-                        color: highlighted ? "#ffffff" : "#3D2460",
+                        color: highlighted ? "#E91E8C" : "#7B6A9A",
                       }}
                     >
                       {item.id}
@@ -206,7 +206,7 @@ export default function Home() {
                         className="text-[13px] font-bold tracking-[0.15em] transition-colors duration-150"
                         style={{
                           fontFamily: "var(--font-oswald)",
-                          color: highlighted ? "#ffffff" : "#7B6A9A",
+                          color: highlighted ? "#ffffff" : "#BFB3DE",
                         }}
                       >
                         {item.label}
@@ -215,7 +215,7 @@ export default function Home() {
                         className="text-[10px] tracking-widest mt-0.5 transition-colors duration-150"
                         style={{
                           fontFamily: "var(--font-oswald)",
-                          color: highlighted ? "rgba(255,255,255,0.65)" : "#3D2460",
+                          color: highlighted ? "rgba(255,255,255,0.65)" : "#7B6A9A",
                         }}
                       >
                         {item.sublabel}
@@ -241,9 +241,10 @@ export default function Home() {
           <div className="p-4 space-y-4 shrink-0 border-t border-[#2A1545]">
             <SystemTelemetry />
             <div
-              className="space-y-1.5 text-[9px] text-[#3D2460]"
+              className="space-y-1.5 text-[9px] text-textMuted"
               style={{ fontFamily: "var(--font-oswald)" }}
             >
+
               <div className="flex items-center gap-2">
                 <span className="border border-[#2A1545] text-textMuted px-1.5 py-0.5 text-[9px]">W</span>
                 <span className="border border-[#2A1545] text-textMuted px-1.5 py-0.5 text-[9px]">S</span>

@@ -3,16 +3,17 @@
 import React, { useState, useEffect } from "react";
 
 const crewRoles = [
-  { role: "DRIVER",  status: "STANDBY" },
-  { role: "HACKER",  status: "ACTIVE"  },
-  { role: "GUNMAN",  status: "ACTIVE"  },
+  { role: "AI DEV",   status: "ACTIVE"  },
+  { role: "ROBOTICS", status: "ACTIVE"  },
+  { role: "SEC OPS",  status: "STANDBY" },
 ];
 
 export default function SystemTelemetry() {
-  const [wantedLevel] = useState(2);
-  const [heat,   setHeat]   = useState(34);
-  const [bounty, setBounty] = useState(12500);
+  const [wantedLevel] = useState(3);
+  const [heat,   setHeat]   = useState(42);
+  const [bounty, setBounty] = useState(34000);
   const [uptime, setUptime] = useState(0);
+
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -41,10 +42,11 @@ export default function SystemTelemetry() {
       <div className="space-y-2">
         <div className="flex justify-between items-center">
           <span className="text-[10px] text-textMuted tracking-widest uppercase">Wanted Level</span>
-          <span className="text-[9px] font-bold tracking-wider" style={{ color:"#E91E8C" }}>
-            {wantedLevel>4?"MOST WANTED":wantedLevel>2?"HOT":"CLEAR"}
+          <span className="text-[9px] font-bold tracking-wider animate-pulse" style={{ color:"#E91E8C" }}>
+            ALWAYS READY FOR HACKATHONS
           </span>
         </div>
+
         <div className="flex gap-1.5">
           {Array.from({length:5}).map((_,i) => (
             <span key={i} className={i<wantedLevel?"wanted-star-active":""}
@@ -70,9 +72,10 @@ export default function SystemTelemetry() {
       <div className="flex justify-between items-center pt-3" style={{ borderTop:"1px solid #2A1545" }}>
         <span className="text-[10px] text-textMuted tracking-widest uppercase">Active Bounty</span>
         <span className="text-[11px] font-bold tracking-wider" style={{ color:"#FF3D9A" }}>
-          ${bounty.toLocaleString("en-US")}
+          ₹{bounty.toLocaleString("en-US")}
         </span>
       </div>
+
 
       {/* Crew */}
       <div className="space-y-2 pt-3" style={{ borderTop:"1px solid #2A1545" }}>
@@ -82,8 +85,9 @@ export default function SystemTelemetry() {
             <div key={c.role} className="flex justify-between items-center">
               <span className="text-[10px] text-textMuted">{c.role}</span>
               <span className="text-[9px] font-bold tracking-widest"
-                style={{ color:c.status==="ACTIVE"?"#E91E8C":"#3D2460" }}>{c.status}</span>
+                style={{ color:c.status==="ACTIVE"?"#E91E8C":"#7B6A9A" }}>{c.status}</span>
             </div>
+
           ))}
         </div>
       </div>

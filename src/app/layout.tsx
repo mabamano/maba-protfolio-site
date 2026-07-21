@@ -23,11 +23,12 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
-  title:       "ALEX VANCE // ELITE FULL-STACK ENGINEER",
-  description: "Premium portfolio dashboard. Elite Full-Stack Engineer & Project Lead.",
-  keywords:    "Alex Vance, Full-Stack Engineer, Portfolio, Dashboard, Project Lead",
-  authors:     [{ name: "Alex Vance" }],
+  title:       "MANOJKUMAR M // AI & ROBOTICS ARCHITECT",
+  description: "Premium portfolio dashboard. Undergraduate in Computer Science & Business Systems at RIT. Expert in AI, Robotics, Embedded Systems, Cybersecurity, and Full-Stack Development.",
+  keywords:    "Manojkumar M, kalaimaba, mabamano, AI, Robotics, Embedded Systems, Full-Stack Developer, Cybersecurity, Portfolio, Dashboard",
+  authors:     [{ name: "Manojkumar M" }],
 };
+
 
 export default function RootLayout({
   children,

@@ -3,18 +3,19 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSound } from "@/context/SoundContext";
-import { Layers, Cpu, Code2, Terminal, Hexagon, Database, Boxes, Cloud } from "lucide-react";
+import { Layers, Cpu, Code2, Terminal, Hexagon, Database, Boxes, Cloud, Shield } from "lucide-react";
 
 const techItems = [
-  { name: "Next.js",    icon: Layers,   color: "#F0E6FF", exp: "5 YRS", tier: "EXPERT"   },
-  { name: "React",      icon: Cpu,      color: "#61DAFB", exp: "7 YRS", tier: "EXPERT"   },
-  { name: "TypeScript", icon: Code2,    color: "#6B9FFF", exp: "6 YRS", tier: "EXPERT"   },
-  { name: "Node.js",    icon: Terminal, color: "#7EC86A", exp: "8 YRS", tier: "EXPERT"   },
-  { name: "GraphQL",    icon: Hexagon,  color: "#FF69B4", exp: "4 YRS", tier: "ADVANCED" },
-  { name: "Postgres",   icon: Database, color: "#7BA7FF", exp: "6 YRS", tier: "EXPERT"   },
-  { name: "Docker",     icon: Boxes,    color: "#5BC8F5", exp: "4 YRS", tier: "ADVANCED" },
-  { name: "AWS Cloud",  icon: Cloud,    color: "#FFB347", exp: "5 YRS", tier: "EXPERT"   },
+  { name: "Python",        icon: Code2,    color: "#3776AB", exp: "3 YRS", tier: "EXPERT"   },
+  { name: "React.js",      icon: Cpu,      color: "#61DAFB", exp: "3 YRS", tier: "EXPERT"   },
+  { name: "ROS 2",         icon: Boxes,    color: "#FF5722", exp: "2 YRS", tier: "ADVANCED" },
+  { name: "TensorFlow",    icon: Layers,   color: "#FF9900", exp: "2 YRS", tier: "ADVANCED" },
+  { name: "ESP32 / IoT",   icon: Hexagon,  color: "#00979D", exp: "4 YRS", tier: "EXPERT"   },
+  { name: "Node.js",       icon: Terminal, color: "#7EC86A", exp: "3 YRS", tier: "EXPERT"   },
+  { name: "Cybersecurity", icon: Shield,   color: "#E91E8C", exp: "2 YRS", tier: "ADVANCED" },
+  { name: "Firebase / SQL",icon: Database, color: "#FFCA28", exp: "3 YRS", tier: "EXPERT"   },
 ];
+
 
 export default function CoreTechSection() {
   const { playHover } = useSound();
@@ -51,13 +52,14 @@ export default function CoreTechSection() {
                 }} />
               )}
               <div className="relative z-10 transition-all duration-200"
-                style={{ color: isHov ? tech.color : "#3D2460" }}>
+                style={{ color: isHov ? tech.color : "#7B6A9A" }}>
                 <Icon size={36} strokeWidth={1.2} />
               </div>
               <span className="relative z-10 text-xs tracking-widest font-semibold uppercase transition-colors duration-200"
-                style={{ fontFamily: "var(--font-oswald)", color: isHov ? "#F0E6FF" : "#7B6A9A" }}>
+                style={{ fontFamily: "var(--font-oswald)", color: isHov ? "#F0E6FF" : "#BFB3DE" }}>
                 {tech.name}
               </span>
+
 
               <AnimatePresence>
                 {isHov && (

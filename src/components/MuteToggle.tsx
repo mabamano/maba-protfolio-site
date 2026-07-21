@@ -43,10 +43,11 @@ export default function MuteToggle() {
     >
       {isMuted ? (
         <>
-          <VolumeX size={13} style={{ color: "#3D2460" }} />
+          <VolumeX size={13} style={{ color: "#7B6A9A" }} />
           <span className="text-[11px] tracking-widest font-semibold"
-            style={{ fontFamily: "var(--font-oswald)", color: "#3D2460" }}>[ MUSIC: OFF ]</span>
+            style={{ fontFamily: "var(--font-oswald)", color: "#7B6A9A" }}>[ MUSIC: OFF ]</span>
         </>
+
       ) : (
         <>
           <Volume2 size={13} style={{ color: "#E91E8C" }} />
