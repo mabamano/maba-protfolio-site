@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView, useSpring, useTransform } from "framer-motion";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 interface PayoutRow {
   label:      string;
@@ -38,7 +39,7 @@ const payoutRows: PayoutRow[] = [
     label:   "DOWNLOAD MISSION BRIEF",
     display: "[ GET_RESUME.PDF ]",
     isLink:  true,
-    href:    "/manoj_s_Resume.pdf",
+    href:    getAssetPath("/manoj_s_Resume.pdf"),
   },
 
 ];

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Montserrat, Oswald } from "next/font/google";
 import "./globals.css";
 import { SoundProvider } from "@/context/SoundContext";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -38,7 +39,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${montserrat.variable} ${oswald.variable} antialiased select-none`}
     >
-      <body className="bg-canvas text-textPrimary font-sans">
+      <body
+        className="bg-canvas text-textPrimary font-sans"
+        style={{ "--bg-image": `url(${getAssetPath("/backgroung.jpg")})` } as React.CSSProperties}
+      >
         <SoundProvider>
           {children}
         </SoundProvider>

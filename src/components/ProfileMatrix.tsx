@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 export default function ProfileMatrix() {
   return (
@@ -38,7 +39,7 @@ export default function ProfileMatrix() {
         <div className="flex-1 w-full relative bg-[#120822]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/myprofilepic.jpeg"
+            src={getAssetPath("/myprofilepic.jpeg")}
             alt="Manojkumar M"
             className="w-full h-full object-cover object-top brightness-[1.05] contrast-[1.05]"
           />

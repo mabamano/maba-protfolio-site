@@ -98,7 +98,7 @@ body {
       transparent 1px,
       transparent 16px
     ),
-    url('/backgroung.jpg');
+    var(--bg-image, url('/backgroung.jpg'));
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

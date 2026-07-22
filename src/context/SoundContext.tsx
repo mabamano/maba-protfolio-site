@@ -8,8 +8,9 @@ import React, {
   useRef,
   useCallback,
 } from "react";
+import { getAssetPath } from "@/utils/getAssetPath";
 
-const BG_MUSIC_SRC = "/theme-song.mp4";
+const BG_MUSIC_SRC = getAssetPath("/theme-song.mp4");
 const BG_MUSIC_VOLUME = 0.06;
 
 function readMutedPreference(): boolean {

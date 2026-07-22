@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useSound } from "@/context/SoundContext";
 import { motion, AnimatePresence } from "framer-motion";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 interface BootSequenceProps {
   onComplete: () => void;
@@ -13,7 +14,7 @@ const images = [
   "/gta_art_2.png",
   "/gta_art_3.png",
   "/backgroung.jpg"
-];
+].map(getAssetPath);
 
 export default function BootSequence({ onComplete }: BootSequenceProps) {
   const { playHover, playBootUp, startBackgroundMusic, playGlitch } = useSound();

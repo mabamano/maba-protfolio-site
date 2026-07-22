@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSound } from "@/context/SoundContext";
 import { Phone, Mail, FileText, Github, Linkedin, Smartphone, X, Volume2, VolumeX } from "lucide-react";
+import { getAssetPath } from "@/utils/getAssetPath";
 
 export default function IFruitHUD() {
   const { playHover, playConfirm, isMuted, toggleMute } = useSound();
@@ -28,7 +29,7 @@ export default function IFruitHUD() {
       label: "DOWNLOAD RESUME",
       sub: "manoj_s_Resume.pdf",
       icon: FileText,
-      href: "/manoj_s_Resume.pdf",
+      href: getAssetPath("/manoj_s_Resume.pdf"),
       download: true,
       color: "#9B27AF",
     },
