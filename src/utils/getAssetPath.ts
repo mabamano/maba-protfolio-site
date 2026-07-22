@@ -1,4 +1,16 @@
-export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const REPO_NAME = "/maba-protfolio-site";
+
+export function getBasePath(): string {
+  if (typeof window !== "undefined") {
+    if (window.location.pathname.startsWith(REPO_NAME)) {
+      return REPO_NAME;
+    }
+  }
+  if (process.env.NODE_ENV === "production") {
+    return REPO_NAME;
+  }
+  return process.env.NEXT_PUBLIC_BASE_PATH || "";
+}
 
 export function getAssetPath(path: string): string {
   if (!path) return path;
@@ -6,5 +18,11 @@ export function getAssetPath(path: string): string {
     return path;
   }
   const cleanPath = path.startsWith("/") ? path : `/${path}`;
-  return `${BASE_PATH}${cleanPath}`;
+  const basePath = getBasePath();
+
+  if (basePath && cleanPath.startsWith(basePath)) {
+    return cleanPath;
+  }
+
+  return `${basePath}${cleanPath}`;
 }

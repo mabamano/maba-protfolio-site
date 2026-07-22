@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   basePath: basePath,
+  assetPrefix: isProd ? "/maba-protfolio-site/" : undefined,
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },

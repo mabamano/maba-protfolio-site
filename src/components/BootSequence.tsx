@@ -9,12 +9,12 @@ interface BootSequenceProps {
   onComplete: () => void;
 }
 
-const images = [
+const rawImages = [
   "/gta_art_1.png",
   "/gta_art_2.png",
   "/gta_art_3.png",
   "/backgroung.jpg"
-].map(getAssetPath);
+];
 
 export default function BootSequence({ onComplete }: BootSequenceProps) {
   const { playHover, playBootUp, startBackgroundMusic, playGlitch } = useSound();
@@ -26,7 +26,7 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
   useEffect(() => {
     if (stage === "click-to-start") return;
     const interval = setInterval(() => {
-      setCurrentImageIdx((prev) => (prev + 1) % images.length);
+      setCurrentImageIdx((prev) => (prev + 1) % rawImages.length);
     }, 6000);
     return () => clearInterval(interval);
   }, [stage]);
@@ -122,7 +122,7 @@ export default function BootSequence({ onComplete }: BootSequenceProps) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${images[currentImageIdx]})` }}
+            style={{ backgroundImage: `url(${getAssetPath(rawImages[currentImageIdx])})` }}
           />
         </AnimatePresence>
 
