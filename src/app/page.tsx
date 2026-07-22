@@ -6,12 +6,15 @@ import { motion } from "framer-motion";
 import OverviewSection from "@/components/OverviewSection";
 import CoreTechSection from "@/components/CoreTechSection";
 import DeployedProjectsSection from "@/components/DeployedProjectsSection";
+import AchievementsSection from "@/components/AchievementsSection";
 import TransmitMessageSection from "@/components/TransmitMessageSection";
 import MuteToggle from "@/components/MuteToggle";
+import IFruitHUD from "@/components/IFruitHUD";
 import BootSequence from "@/components/BootSequence";
 import SystemTelemetry from "@/components/SystemTelemetry";
 
-type SectionId = "overview" | "core-tech" | "projects" | "contact";
+
+type SectionId = "overview" | "core-tech" | "projects" | "trophies" | "contact";
 
 interface MenuItem {
   id: string;
@@ -24,7 +27,8 @@ const menuItems: MenuItem[] = [
   { id: "01", label: "THE_LEAD",  sublabel: "OVERVIEW",     sectionId: "overview" },
   { id: "02", label: "INVENTORY", sublabel: "CORE_TECH",    sectionId: "core-tech" },
   { id: "03", label: "HEISTS",    sublabel: "PROJECTS",     sectionId: "projects" },
-  { id: "04", label: "CONTACT",   sublabel: "VIP_CONTRACT", sectionId: "contact" },
+  { id: "04", label: "TROPHIES",  sublabel: "HALL_OF_FAME", sectionId: "trophies" },
+  { id: "05", label: "CONTACT",   sublabel: "VIP_CONTRACT", sectionId: "contact" },
 ];
 
 export default function Home() {
@@ -40,8 +44,10 @@ export default function Home() {
     "overview":  null,
     "core-tech": null,
     "projects":  null,
+    "trophies":  null,
     "contact":   null,
   });
+
 
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -321,10 +327,30 @@ export default function Home() {
         <div className="mx-6 md:mx-10 border-t border-[#2A1545]" />
 
         <section
+          id="trophies"
+          ref={(el) => { sectionRefs.current["trophies"] = el; }}
+          className="min-h-screen px-6 py-12 md:px-10 md:py-14 scroll-mt-24"
+        >
+          <div className="max-w-5xl xl:max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <AchievementsSection />
+            </motion.div>
+          </div>
+        </section>
+
+        <div className="mx-6 md:mx-10 border-t border-[#2A1545]" />
+
+        <section
           id="contact"
           ref={(el) => { sectionRefs.current["contact"] = el; }}
           className="min-h-screen px-6 py-12 md:px-10 md:py-14 scroll-mt-24"
         >
+
           <div className="max-w-5xl xl:max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -356,6 +382,8 @@ export default function Home() {
       </div>
 
       <MuteToggle />
+      <IFruitHUD />
     </div>
   );
 }
+
